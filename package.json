@@ -1,6 +1,17 @@
 {
   "dependencies": {
     "discord.js": "^14.17.2",
-    "dotenv": "^16.4.7"
-  }
+    "dotenv": "^16.4.7",
+    "node-schedule": "^2.1.1"
+  },
+  "name": "vibes",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }

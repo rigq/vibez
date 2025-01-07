@@ -1,13 +1,14 @@
-require('dotenv').config(); // Carga las variables de entorno
+const { Client, Events, GatewayIntentBits } = require("discord.js");
+const schedule = require('node-schedule');
+require('dotenv').config();
 
-const { Client, GatewayIntentBits } = require('discord.js');
-const client = new Client({ intents: [GatewayIntentBits.Guilds] });
-
-// Usa el token desde process.env
-const TOKEN = process.env.DISCORD_TOKEN;
-
-client.once('ready', () => {
-    console.log(`Bot conectado como ${client.user.tag}`);
+const client = new Client({
+    intents: [
+        GatewayIntentBits.Guilds,
+        GatewayIntentBits.GuildMessages,
+        GatewayIntentBits.MessageContent,
+        GatewayIntentBits.GuildMembers,
+    ],
 });
 
-client.login(TOKEN);
+client.login(process.env.TOKEN);
